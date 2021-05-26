@@ -1,4 +1,4 @@
-# Step 2 - Climate App -update
+# Step 2 - Climate App -updating
 
 import numpy as np
 import datetime as dt
@@ -14,6 +14,7 @@ from flask import Flask, jsonify
 engine = create_engine("sqlite:///hawaii.sqlite")
 Base = automap_base()
 Base.prepare(engine, reflect=True)
+
 
 Measurement = Base.classes.measurement
 Station = Base.classes.station
@@ -35,6 +36,8 @@ def home():
         f"Temperature stat from the start date(yyyy-mm-dd): /api/v1.0/yyyy-mm-dd<br/>"
         f"Temperature stat from start to end dates(yyyy-mm-dd): /api/v1.0/yyyy-mm-dd/yyyy-mm-dd"
     )
+    
+     
     
 #Convert the query results to a dictionary using `date` as the key and `prcp` as the value.
 #Return the JSON representation of your dictionary.
