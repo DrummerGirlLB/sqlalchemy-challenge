@@ -119,6 +119,8 @@ def get_t_start(start):
 
     return jsonify(tobsall)
 
+
+
 #When given the start and the end date, calculate the `TMIN`, `TAVG`, and `TMAX` 
 #      for dates between the start and end date inclusive.
 @app.route('/api/v1.0/<start>/<stop>')
@@ -137,7 +139,6 @@ def get_temp_start_stop(start,stop):
         tobsall.append(tobs_dict)
 
     return jsonify(tobsall)
-
 
 if __name__ == '__main__':
     app.run(debug=True)
